@@ -1,0 +1,27 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Platform folders
+.android/
+.ios/
+.linux/
+.macos/
+.windows/
+
+# Firebase
+firebase-debug.log
+
+# Local configs
+android/local.properties
+
+# IDE
+.vscode/
+.idea/
+
+# Local SDKs / JDKs (VERY IMPORTANT)
+oracleJdk-25/
+lib/core/services/oracleJdk-25/
