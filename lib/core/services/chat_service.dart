@@ -179,4 +179,19 @@ class ChatService {
       });
     }
   }
+  // ---------------- DELETE CONVERSATION ----------------
+
+Future<void> deleteConversation(String conversationId) async {
+  final convoRef =
+      _db.collection('conversations').doc(conversationId);
+
+  final messages = await convoRef.collection('messages').get();
+
+  for (final doc in messages.docs) {
+    await doc.reference.delete();
+  }
+
+  await convoRef.delete();
+}
+
 }
